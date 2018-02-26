@@ -1,0 +1,28 @@
+{
+  "name": "adventure",
+  "version": "1.0.0",
+  "description": "Тестовое задание Adventure",
+  "main": "source/index.html",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run editorconfig",
+    "start": "npm run build && gulp serve"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "author": "Marina Glushakova",
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
