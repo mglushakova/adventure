@@ -6,7 +6,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "test": "npm run editorconfig",
-    "start": "npm run build && gulp serve"
+    "start": "gulp serve"
   },
   "editorconfig-cli": [
     "*.json",
