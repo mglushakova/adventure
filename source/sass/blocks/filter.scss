@@ -1,0 +1,56 @@
+.filter {
+  margin-top: 60px;
+
+  font-family: $fontText;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #9fa2a8;
+}
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter__item {
+  margin-right: 25px;
+
+  &--active .filter__link {
+    position: relative;
+
+    color: #242526;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 17px;
+      left: 0;
+      right: 0;
+
+      height: 2px;
+
+      background-color: #242526;
+    }
+  }
+}
+
+.filter__link {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: #242526;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

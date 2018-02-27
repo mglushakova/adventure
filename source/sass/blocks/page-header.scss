@@ -1,0 +1,33 @@
+.page-header {
+  color: #eff2f7;
+
+  background-color: $colorBgDark;
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-header__link {
+  display: block;
+
+  background-color: $colorBgDark;
+
+  &:hover,
+  &:focus {
+    background-color: #22539d;
+  }
+
+  &:active {
+    background-color: darken(#22539d, 10%);
+  }
+}
+
+.page-header__logo-icon {
+  margin-right: 20px;
+
+  opacity: 0.32;
+}
