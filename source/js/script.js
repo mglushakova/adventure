@@ -1,10 +1,11 @@
 "use strict";
 
+//Реализация слайдера
 let sliderButton = document.querySelectorAll(".slider__button");
 
 for ( let i = 0; i < sliderButton.length; i++ ) {
   sliderButton[i].addEventListener("click", function (event) {
-    let slides = event.target.parentElement.nextElementSibling.querySelectorAll(".slider__item");
+    let slides = event.target.parentElement.parentElement.querySelectorAll(".slider__item");
 
     if ( event.target.classList.contains("slider__prev") ) {
       for ( let k = 0; k <= slides.length - 1; k++ ) {
@@ -31,5 +32,39 @@ for ( let i = 0; i < sliderButton.length; i++ ) {
         }
       }
     }
+  });
+}
+
+//Реализация модальных окон
+let imageButton = document.querySelectorAll(".slider__item--image");
+let videoButton = document.querySelectorAll(".slider__item--video");
+
+for ( let i = 0; i < imageButton.length; i++ ) {
+  imageButton[i].addEventListener("click", function (event) {
+    let modal = event.target.querySelector(".slider__modal");
+    let closeButton = modal.querySelector(".slider__modal-close");
+
+    modal.classList.add("slider__modal--active");
+
+    closeButton.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      modal.classList.remove("slider__modal--active");
+    });
+  });
+}
+
+for ( let i = 0; i < videoButton.length; i++ ) {
+  videoButton[i].addEventListener("click", function (event) {
+    let modal = event.target.querySelector(".slider__modal");
+    let closeButton = modal.querySelector(".slider__modal-close");
+
+    modal.classList.add("slider__modal--active");
+
+    closeButton.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      modal.classList.remove("slider__modal--active");
+    });
   });
 }
