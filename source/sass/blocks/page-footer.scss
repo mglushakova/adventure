@@ -1,0 +1,36 @@
+.page-footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  font-family: $fontText;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6b7076;
+
+  background-color: $colorBgDark;
+}
+
+.page-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__copyright {
+  margin-left: 10px;
+
+  font-family: $fontHeader;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #6b7076;
+}
+
+.page-footer__teaser {
+  margin-right: 5px;
+
+  &--light {
+    color: #b5b9be;
+  }
+}

@@ -1,5 +1,7 @@
-.countries {
-  margin-top: 25px;
+.countries__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .countries__list {
@@ -7,19 +9,38 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 
   list-style: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .countries__item {
   position: relative;
 
+  margin-bottom: 20px;
   width: 300px;
-  height: 200px;
+  min-height: 200px;
 
-  &--big {
-    width: 620px;
-    height: 420px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .countries__wrap {
+    width: 1260px;
+  }
+
+  .countries__list {
+    margin-bottom: 0;
+
+    &:first-child {
+      width: 620px;
+    }
   }
 }

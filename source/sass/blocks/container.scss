@@ -1,18 +1,18 @@
 .container {
   margin: 0 auto;
-  width: 280px;
+  width: 300px;
 }
 
 @media (min-width: $tabletWidth) {
   .container {
     margin: 0 auto;
-    width: 708px;
+    width: 620px;
   }
 }
 
 @media (min-width: $desktopWidth) {
   .container {
     margin: 0 auto;
-    width: 1220px;
+    width: 1260px;
   }
 }
