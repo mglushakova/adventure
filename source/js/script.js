@@ -34,35 +34,37 @@ for ( var i = 0; i < sliderButton.length; i++ ) {
 }
 
 //Реализация модальных окон
-var imageButton = document.querySelectorAll(".slider__item--image");
-var videoButton = document.querySelectorAll(".slider__item--video");
+var imageButtons = document.querySelectorAll(".slider__item--image");
+var videoButtons = document.querySelectorAll(".slider__item--video");
+var closeButtons = document.querySelectorAll(".slider__modal-close");
 
-for ( var i = 0; i < imageButton.length; i++ ) {
-  imageButton[i].addEventListener("click", function (event) {
+for ( var l = 0; l < imageButtons.length; l++ ) {
+  imageButtons[l].addEventListener("click", function (event) {
+    event.preventDefault();
+
     var modal = event.target.querySelector(".slider__modal");
-    var closeButton = modal.querySelector(".slider__modal-close");
 
     modal.classList.add("slider__modal--active");
-
-    closeButton.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      modal.classList.remove("slider__modal--active");
-    });
   });
 }
 
-for ( var i = 0; i < videoButton.length; i++ ) {
-  videoButton[i].addEventListener("click", function (event) {
+for ( var m = 0; m < videoButtons.length; m++ ) {
+  videoButtons[m].addEventListener("click", function (event) {
+    event.preventDefault();
+
     var modal = event.target.querySelector(".slider__modal");
-    var closeButton = modal.querySelector(".slider__modal-close");
 
     modal.classList.add("slider__modal--active");
-
-    closeButton.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      modal.classList.remove("slider__modal--active");
-    });
   });
 }
+
+for ( var n = 0; n < closeButtons.length; n++ ) {
+  closeButtons[n].addEventListener("click", function (event) {
+    event.preventDefault();
+
+    var modal = event.target.parentElement.parentElement;
+
+    modal.classList.remove("slider__modal--active");
+  });
+}
+
