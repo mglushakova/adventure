@@ -1,14 +1,12 @@
-"use strict";
-
 //Реализация слайдера
-let sliderButton = document.querySelectorAll(".slider__button");
+var sliderButton = document.querySelectorAll(".slider__button");
 
-for ( let i = 0; i < sliderButton.length; i++ ) {
+for ( var i = 0; i < sliderButton.length; i++ ) {
   sliderButton[i].addEventListener("click", function (event) {
-    let slides = event.target.parentElement.parentElement.querySelectorAll(".slider__item");
+    var slides = event.target.parentElement.parentElement.querySelectorAll(".slider__item");
 
     if ( event.target.classList.contains("slider__prev") ) {
-      for ( let k = 0; k <= slides.length - 1; k++ ) {
+      for ( var k = 0; k <= slides.length - 1; k++ ) {
         if ( slides[k].classList.contains("slider__item--active") && k !== 0 ) {
           slides[k].classList.remove("slider__item--active");
           slides[k - 1].classList.add("slider__item--active");
@@ -20,7 +18,7 @@ for ( let i = 0; i < sliderButton.length; i++ ) {
         }
       }
     } else if ( event.target.classList.contains("slider__next") ) {
-      for ( let k = slides.length - 1; k >= 0; k-- ) {
+      for ( var k = slides.length - 1; k >= 0; k-- ) {
         if ( slides[k].classList.contains("slider__item--active") && k !== slides.length - 1 ) {
           slides[k].classList.remove("slider__item--active");
           slides[k + 1].classList.add("slider__item--active");
@@ -36,13 +34,13 @@ for ( let i = 0; i < sliderButton.length; i++ ) {
 }
 
 //Реализация модальных окон
-let imageButton = document.querySelectorAll(".slider__item--image");
-let videoButton = document.querySelectorAll(".slider__item--video");
+var imageButton = document.querySelectorAll(".slider__item--image");
+var videoButton = document.querySelectorAll(".slider__item--video");
 
-for ( let i = 0; i < imageButton.length; i++ ) {
+for ( var i = 0; i < imageButton.length; i++ ) {
   imageButton[i].addEventListener("click", function (event) {
-    let modal = event.target.querySelector(".slider__modal");
-    let closeButton = modal.querySelector(".slider__modal-close");
+    var modal = event.target.querySelector(".slider__modal");
+    var closeButton = modal.querySelector(".slider__modal-close");
 
     modal.classList.add("slider__modal--active");
 
@@ -54,10 +52,10 @@ for ( let i = 0; i < imageButton.length; i++ ) {
   });
 }
 
-for ( let i = 0; i < videoButton.length; i++ ) {
+for ( var i = 0; i < videoButton.length; i++ ) {
   videoButton[i].addEventListener("click", function (event) {
-    let modal = event.target.querySelector(".slider__modal");
-    let closeButton = modal.querySelector(".slider__modal-close");
+    var modal = event.target.querySelector(".slider__modal");
+    var closeButton = modal.querySelector(".slider__modal-close");
 
     modal.classList.add("slider__modal--active");
 
